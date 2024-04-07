@@ -1,1 +1,280 @@
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Primary font */
+    --primary-font: "Poppins", sans-serif;
+
+    /* Light Mode */
+    --primary-bg-color: #ffffff;
+    --primary-text-color: #000000;
+    --secondary-color: #575757;
+    --btn-bg-color: #2196f3;
+    --cta-hover-color: #167bce;
+    --btn-bg-light: #eeeeee;
+
+    /* Dark mode */
+    --dark-primary-bg-color: #222222;
+    --dark-primary-text-color: #ffffff;
+    --dark-secondary-color: #828282;
+    --dark-btn-bg-color: #1e88e5;
+    --dark-cta-hover-color: #0d5e8c;
+    --dark-btn-bg-light: #eeeeee;
+
+}
+
+.dark-theme {
+    --primary-bg-color: var(--dark-primary-bg-color);
+    --primary-text-color: var(--dark-primary-text-color);
+    --secondary-color: var(--dark-secondary-color);
+    --btn-bg-color: var(--dark-btn-bg-color);
+    --cta-hover-color: var(--dark-cta-hover-color);
+    --btn-bg-light: var(--dark-btn-bg-light);
+}
+
+body {
+    margin: 0px;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+    font-family: var(--primary-font);
+}
+
+header {
+    margin-top: 10px;
+}
+
+.theme-btn {
+    position: relative;
+    left: 136px;
+}
+
+h1, h2, h3, p {
+    margin: 0px;
+    cursor: default;
+}
+
+header,
+.perfil-section,
+article,
+footer,
+.logo-container,
+.experience,
+.cta,
+.portfolio-skills,
+.btn-bg,
+.portfolio,
+.skills {
+    display: flex;
+}
+
+.perfil-section, .portfolio, .skills {
+    flex-direction: column;
+}
+
+.perfil-section, .btn-bg, .portfolio, .skills {
+    align-items: center;
+}
+
+.perfil-section, .experience, .wrapper {
+    text-align: center;
+}
+
+.theme-btn, .logo-container a, .logo-container img {
+    height: 24px;
+}
+
+article, .perfil-section, .logo-container, .portfolio, .skills {
+    gap: 16px;
+}
+
+.perfil-pic {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.perfil-pic img, .wrapper img {
+    width: 100%;
+}
+
+
+.frame-pic {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    right: 1.5px;
+    bottom: 1.5px;
+    left: 1.5px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-bg-color);
+    z-index: 1;
+}
+
+.perfil-info h1, h2 {
+    font-weight: 400;
+}
+
+article p, .perfil-info h2 {
+    color: var(--secondary-color);
+}
+
+.hero-info h2 {
+    font-size: 16px;
+    margin: 0px 0px 16px 0px;
+}
+
+footer, header, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg {
+    justify-content: center;
+}
+
+.experience {
+    margin: auto;
+    margin-top: 23px;
+    max-width: 320px;
+}
+
+.experience strong {
+    font-weight: 500;
+}
+
+.experience h2 {
+    width: 30%;
+    font-weight: 300;
+    font-size: 14.5px;
+}
+
+.cta {
+    margin-top: 19px;
+}
+
+.cta, .btn-bg {
+    gap: 32px;
+}
+
+.btn, .btn-2, .btn-bg {
+    border-radius: 11px;
+    border: none;
+}
+
+.btn, .btn-2, .btn-bg, .wrapper {
+    font-weight: 600;
+}
+
+.btn, .btn-2, .btn-bg, .wrapper, .project-wrapper {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.download-btn:hover {
+    background-color: var(--cta-hover-color);
+}
+
+.theme-btn, .download-btn:hover, .contact-btn:hover, .btn-2:hover, .wrapper:hover {
+    cursor: pointer;
+}
+
+.btn:hover, .btn-2:hover, .project-wrapper:hover, .logo-container a:hover {
+    transform: scale(0.98);
+}
+
+.btn:active, .btn-2:active, .project-wrapper:active, .logo-container a:active {
+    transform: scale(1);
+}
+
+.contact-btn:hover,
+.download-btn {
+  background-color: var(--btn-bg-color);
+  color: white;
+}
+
+.contact-btn:hover {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-2:hover, .active-btn {
+    background-color: white;
+}
+.btn, .btn-2 {
+    height: 48px;
+}
+
+.btn {
+    width: 144px;
+}
+
+.btn-2 {
+    width: 136px;
+}
+
+.download-btn {
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-skills {
+    height: 64px;
+    margin-top: 24px;
+    position: relative;
+}
+
+.btn-bg, .wrapper {
+    width: 320px;
+}
+
+article p, .btn-bg {
+    background-color: var(--btn-bg-light);
+}
+
+.perfil-section, .portfolio, .skills {
+    margin-top: 32px;
+}
+
+.skills {
+    /* display: none; */
+}
+.wrapper img {
+    border-radius: 16px;
+}
+
+article, .wrapper h3 {
+    margin-bottom: 24px;
+}
+
+article {
+    flex-wrap: wrap;
+}
+
+article p {
+    border-radius: 8px;
+    flex-grow: 20;
+    padding: 16px;
+}
+
+footer {
+    margin: 48px 0;
+}
+
+@media screen and (min-width: 900px) {
+
+.skills, .portfolio {
+    flex-direction: row;
+    width: 720px;
+}
+
+.skills {
+    margin: 32px auto 0;
+    justify-content: center;
+}
+
+.portfolio {
+    margin: 32px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrapper {
+    width: calc(48%);
+    flex: none;
+}
+}
