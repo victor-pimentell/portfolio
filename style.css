@@ -7,21 +7,29 @@
     --primary-font: "Poppins", sans-serif;
 
     /* Light Mode */
-    --primary-bg-color: #ffffff;
-    --primary-text-color: #000000;
-    --secondary-color: #575757;
-    --btn-bg-color: #2196f3;
-    --cta-hover-color: #167bce;
+    --primary-bg-color: #fff;
+    --primary-text-color: #22272b;
+    --secondary-color: #9da1a5;
+    --btn-bg-color: #42a5f5;
+    --cta-hover-color: #2f9bf4;
     --btn-bg-light: #eeeeee;
 
+    --first-color: #42a5f5;
+    --first-color-alt: #2f9bf4;
+    --title-color: #22272b;
+    --text-color-light: #bac0c4;
+    --text-color-lighten: hsl(207, 8%, 92%);
+    --body-color: #fafdff;
+    --container-color: #FFFFFF;
+
+
     /* Dark mode */
-    --dark-primary-bg-color: #222222;
-    --dark-primary-text-color: #ffffff;
-    --dark-secondary-color: #828282;
+    --dark-primary-bg-color: hsl(207, 40%, 8%);
+    --dark-primary-text-color: hsl(207, 12%, 95%);
+    --dark-secondary-color: hsl(207, 12%, 75%);
     --dark-btn-bg-color: #1e88e5;
     --dark-cta-hover-color: #0d5e8c;
-    --dark-btn-bg-light: #eeeeee;
-
+    --dark-btn-bg-light: hsl(207, 24%, 12%);
 }
 
 .dark-theme {
@@ -63,16 +71,18 @@ footer,
 .cta,
 .portfolio-skills,
 .btn-bg,
-.portfolio,
+.backend,
+.frontend,
+.side,
 .skills {
     display: flex;
 }
 
-.perfil-section, .portfolio, .skills {
+.perfil-section, .backend, .frontend, .side, .skills {
     flex-direction: column;
 }
 
-.perfil-section, .btn-bg, .portfolio, .skills {
+.perfil-section, .btn-bg, .backend, .frontend, .side, .skills {
     align-items: center;
 }
 
@@ -80,11 +90,21 @@ footer,
     text-align: center;
 }
 
-.theme-btn, .logo-container a, .logo-container img {
+.theme-btn, .logo-container a {
     height: 24px;
 }
 
-article, .perfil-section, .logo-container, .portfolio, .skills {
+.theme-btn {
+    font-size: 24px;
+}
+
+.logo-container i, .logo-container a {
+    font-size: 28px;
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+article, .perfil-section, .logo-container, .backend, .frontend, .side, .skills {
     gap: 16px;
 }
 
@@ -100,17 +120,14 @@ article, .perfil-section, .logo-container, .portfolio, .skills {
     width: 100%;
 }
 
-
-.frame-pic {
-    content: "";
-    position: absolute;
-    top: 1.5px;
-    right: 1.5px;
-    bottom: 1.5px;
-    left: 1.5px;
+.profile_border {
+    border: 3.5px solid rgb(69, 196, 255);
+    height: 140px;
+    width: 140px;
     border-radius: 50%;
-    border: 3px solid var(--primary-bg-color);
-    z-index: 1;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.75rem;
 }
 
 .perfil-info h1, h2 {
@@ -150,8 +167,13 @@ footer, header, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg {
     margin-top: 19px;
 }
 
-.cta, .btn-bg {
+.cta {
     gap: 32px;
+}
+
+.btn-bg {
+    gap: 8px;
+    padding: 0px 7px 0px 7px;
 }
 
 .btn, .btn-2, .btn-bg {
@@ -169,6 +191,11 @@ footer, header, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg {
 
 .download-btn:hover {
     background-color: var(--cta-hover-color);
+}
+
+.contact-btn {
+    background-color: var(--btn-bg-light);
+    color: var(--primary-text-color);
 }
 
 .theme-btn, .download-btn:hover, .contact-btn:hover, .btn-2:hover, .wrapper:hover {
@@ -193,9 +220,7 @@ footer, header, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-2:hover, .active-btn {
-    background-color: white;
-}
+
 .btn, .btn-2 {
     height: 48px;
 }
@@ -222,19 +247,31 @@ footer, header, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg {
     width: 320px;
 }
 
-article p, .btn-bg {
+article p, .btn-bg, .btn-2 {
     background-color: var(--btn-bg-light);
+    color: var(--primary-text-color);
 }
 
-.perfil-section, .portfolio, .skills {
+.btn-2:hover, .active-btn {
+    background-color: var(--primary-bg-color);
+}
+
+.perfil-section, .backend, .frontend, .side, .skills {
     margin-top: 32px;
 }
 
-.skills {
-    /* display: none; */
+.frontend, .side {
+    display: none;
 }
+
 .wrapper img {
     border-radius: 16px;
+}
+
+.frontend-skills img, .backend-skills img {
+    height: 48px;
+    width: 48px;
+    border-radius: 0%;
 }
 
 article, .wrapper h3 {
@@ -248,7 +285,7 @@ article {
 article p {
     border-radius: 8px;
     flex-grow: 20;
-    padding: 16px;
+    padding: 7px 7px 0px 7px;
 }
 
 footer {
@@ -257,7 +294,7 @@ footer {
 
 @media screen and (min-width: 900px) {
 
-.skills, .portfolio {
+.skills, .backend, .frontend, .side {
     flex-direction: row;
     width: 720px;
 }
@@ -267,7 +304,7 @@ footer {
     justify-content: center;
 }
 
-.portfolio {
+.backend, .frontend, .side {
     margin: 32px auto;
     flex-wrap: wrap;
     justify-content: center;

@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="imgs/moon-line.svg" alt="theme icon" class="theme-btn" id="toggleTheme">
+        <i class="ri-moon-line theme-btn" alt="theme icon" id="toggleTheme"></i>
     </header>
 
     <main>
         <section class="perfil-section">
-            <div class="perfil-pic">
-                <div class="frame-pic"></div>
-                <img src="imgs/photo.jpg" alt="Victor P. Correia">
+            <div class="profile_border">
+                <div class="perfil-pic">
+                    <img src="imgs/photo.jpg" alt="Victor P. Correia">
+                </div>
             </div>
             <div class="perfil-info">
                 <h1>Victor Pimentel Correia</h1>
                 <h2>Desenvolvedor Web</h2>
                 <div class="logo-container">
                     <a href="#">
-                        <img src="imgs/github-line.svg" alt="github-icon">
+                        <i class="ri-github-line" alt="github-icon"></i>
                     </a>
                     <a href="mailto:">
-                        <img src="imgs/mail-line.svg" alt="email-icon">
+                        <i class="ri-mail-line" alt="email-icon"></i>
                     </a>
                     <a href="#">
-                        <img src="imgs/linkedin-box-line.svg" alt="linkedin-icon">
+                        <i class="ri-linkedin-box-line" alt="linkedin-icon"></i>
                     </a>
                 </div>
             </div>
@@ -53,55 +56,88 @@
             </a>
         </section>
 
-        <section class="portfolio-skills">
-            <div class="btn-bg">
-                <button class="btn-2 active-btn">Portfolio</button>
-                <button class="btn-2">Skills</button>
-            </div>
-        </section>
-
-        <section class="portfolio" id="portfolio">
-            <div class="wrapper project-wrapper">
-                <a href="#project">
-                    <img src="imgs/interface_weatherAPP.png" alt="">
-                </a>
-            </div>
-            <div class="wrapper project-wrapper">
-                <a href="#project">
-                    <img src="imgs/interface_weatherAPP.png" alt="">
-                </a>
-            </div>
-            <div class="wrapper project-wrapper">
-                <a href="#project">
-                    <img src="imgs/interface_weatherAPP.png" alt="">
-                </a>
-            </div>
-            <div class="wrapper project-wrapper">
-                <a href="#project">
-                    <img src="imgs/interface_weatherAPP.png" alt="">
-                </a>
-            </div>
-        </section>
-
         <section class="skills" id="skills">
             <div class="wrapper">
                 <h3>Frontend</h3>
                 <article class="frontend-skills">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
+                    <p><img src="https://skillicons.dev/icons?i=html" alt=""></p>
+                    <p><img src="https://skillicons.dev/icons?i=css" alt=""></p>
+                    <p><img src="https://skillicons.dev/icons?i=js" alt=""></p>
                 </article>
             </div>
 
             <div class="wrapper">
                 <h3>Backend</h3>
                 <article class="backend-skills">
-                    <p>Java</p>
-                    <p>Spring Boot</p>
-                    <p>Hibernate</p>
-                    <p>MySQL</p>
-                    <p>Git</p>
+                    <p><img src="https://skillicons.dev/icons?i=java" alt=""></p>
+                    <p><img src="https://skillicons.dev/icons?i=spring" alt=""></p>
+                    <p><img src="https://skillicons.dev/icons?i=hibernate" alt=""></p>
+                    <p><img src="https://skillicons.dev/icons?i=mysql" alt=""></p>
+                    <p><img src="https://skillicons.dev/icons?i=git" alt=""></p>
+                    <p><img src="https://skillicons.dev/icons?i=github" alt=""></p>
                 </article>
+            </div>
+        </section>
+
+        <section class="portfolio-skills">
+            <div class="btn-bg">
+                <button class="btn-2 active-btn" id="backend-btn">Backend</button>
+                <button class="btn-2" id="frontend-btn">Frontend</button>
+                <button class="btn-2" id="side-btn">Side Projects</button>
+            </div>
+        </section>
+
+        <section class="backend" id="backend">
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
+            </div>
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
+            </div>
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
+            </div>
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section class="frontend" id="frontend">
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
+            </div>
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
+            </div>
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section class="side" id="side">
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
+            </div>
+            <div class="wrapper project-wrapper">
+                <a href="#project">
+                    <img src="imgs/interface_weatherAPP.png" alt="">
+                </a>
             </div>
         </section>
     </main>
