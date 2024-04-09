@@ -4,7 +4,7 @@
 
 :root {
     /* Primary font */
-    --primary-font: "Poppins", sans-serif;
+    --primary-font: 'Poppins', sans-serif;
 
     /* Light Mode */
     --primary-bg-color: #fff;
@@ -46,6 +46,7 @@ body {
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
     font-family: var(--primary-font);
+    transition: 0.3s;
 }
 
 header {
@@ -121,7 +122,7 @@ article, .perfil-section, .logo-container, .backend, .frontend, .side, .skills {
 }
 
 .profile_border {
-    border: 3.5px solid rgb(69, 196, 255);
+    border: 3.5px solid #45c4ff;
     height: 140px;
     width: 140px;
     border-radius: 50%;
@@ -130,17 +131,17 @@ article, .perfil-section, .logo-container, .backend, .frontend, .side, .skills {
     margin-bottom: 0.75rem;
 }
 
-.perfil-info h1, h2 {
+.perfil-section h1, h2 {
     font-weight: 400;
 }
 
-article p, .perfil-info h2 {
+article p, .profile_profession {
     color: var(--secondary-color);
 }
 
-.hero-info h2 {
+.perfil-section h2 {
     font-size: 16px;
-    margin: 0px 0px 16px 0px;
+    margin: -10px 0px 8px 0px;
 }
 
 footer, header, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg {
@@ -235,6 +236,7 @@ footer, header, .logo-container, .experience, .cta, .portfolio-skills, .btn-bg {
 
 .download-btn {
     transition: background-color 0.3s ease;
+    box-shadow: 0px 8px 24px #42a4f552;
 }
 
 .portfolio-skills {
@@ -292,26 +294,40 @@ footer {
     margin: 48px 0;
 }
 
+::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #a1a9af;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: #808b93;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(207, 8%, 44%);
+}
+
 @media screen and (min-width: 900px) {
+    .skills, .backend, .frontend, .side {
+        flex-direction: row;
+        width: 720px;
+    }
 
-.skills, .backend, .frontend, .side {
-    flex-direction: row;
-    width: 720px;
-}
+    .skills {
+        margin: 32px auto 0;
+        justify-content: center;
+    }
 
-.skills {
-    margin: 32px auto 0;
-    justify-content: center;
-}
+    .backend, .frontend, .side {
+        margin: 32px auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-.backend, .frontend, .side {
-    margin: 32px auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.wrapper {
-    width: calc(48%);
-    flex: none;
-}
+    .wrapper {
+        width: calc(48%);
+        flex: none;
+    }
 }
