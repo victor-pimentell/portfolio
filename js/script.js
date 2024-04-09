@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const loadTheme = () => {
         const isDark = localStorage.getItem("isDark") === "true";
-        document.body.classList.toggle("dark-theme", isDark);
+        document.body.classList.toggle("dark-theme", !isDark);
     };
 
     loadTheme();

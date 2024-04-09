@@ -13,14 +13,7 @@
     --btn-bg-color: #42a5f5;
     --cta-hover-color: #2f9bf4;
     --btn-bg-light: #eeeeee;
-
-    --first-color: #42a5f5;
-    --first-color-alt: #2f9bf4;
-    --title-color: #22272b;
-    --text-color-light: #bac0c4;
-    --text-color-lighten: hsl(207, 8%, 92%);
-    --body-color: #fafdff;
-    --container-color: #FFFFFF;
+    --glass-color: rgba(255, 255, 255, 0.8);
 
 
     /* Dark mode */
@@ -30,6 +23,8 @@
     --dark-btn-bg-color: #1e88e5;
     --dark-cta-hover-color: #0d5e8c;
     --dark-btn-bg-light: hsl(207, 24%, 12%);
+    --dark-glass-color: rgba(0, 0, 0, 0.8);
+
 }
 
 .dark-theme {
@@ -39,14 +34,23 @@
     --btn-bg-color: var(--dark-btn-bg-color);
     --cta-hover-color: var(--dark-cta-hover-color);
     --btn-bg-light: var(--dark-btn-bg-light);
+    --glass-color: var(--dark-glass-color);
 }
 
 body {
+    background-color: var(--primary-bg-color);
+    background-image: url('imgs/bbblurry.svg');
+}
+
+.glass {
+    background-color: var(--glass-color);
+    backdrop-filter: saturate(180%) blur(20px);
     margin: 0px;
     color: var(--primary-text-color);
-    background-color: var(--primary-bg-color);
     font-family: var(--primary-font);
     transition: 0.3s;
+    border-radius: 10px;
+    box-shadow: 0px 8px 24px #00000033;
 }
 
 header {
@@ -330,7 +334,7 @@ article p {
 }
 
 footer {
-    margin: 48px 0;
+    margin: 24px 0px 0px 0px;
 }
 
 ::-webkit-scrollbar {
