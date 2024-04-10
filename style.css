@@ -13,7 +13,7 @@
     --btn-bg-color: #42a5f5;
     --cta-hover-color: #2f9bf4;
     --btn-bg-light: #eeeeee;
-    --glass-color: rgba(255, 255, 255, 0.8);
+    --glass-color: rgba(255, 255, 255, 0.4);
 
 
     /* Dark mode */
@@ -23,7 +23,7 @@
     --dark-btn-bg-color: #1e88e5;
     --dark-cta-hover-color: #0d5e8c;
     --dark-btn-bg-light: hsl(207, 24%, 12%);
-    --dark-glass-color: rgba(0, 0, 0, 0.8);
+    --dark-glass-color: rgba(0, 0, 0, 0.5);
 
 }
 
@@ -39,12 +39,11 @@
 
 body {
     background-color: var(--primary-bg-color);
-    background-image: url('imgs/bbblurry.svg');
+    background-image: url('imgs/background-blur.png');
 }
 
 .glass {
     background-color: var(--glass-color);
-    backdrop-filter: saturate(180%) blur(20px);
     margin: 0px;
     color: var(--primary-text-color);
     font-family: var(--primary-font);
