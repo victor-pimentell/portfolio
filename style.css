@@ -334,6 +334,14 @@ article p {
 
 footer {
     margin: 24px 0px 0px 0px;
+    display: block;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 12px
 }
 
 ::-webkit-scrollbar {
